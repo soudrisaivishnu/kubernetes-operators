@@ -1,0 +1,24 @@
+# permissions for end users to edit wxccoperators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: wxccoperator-editor-role
+rules:
+- apiGroups:
+  - cache.example.com
+  resources:
+  - wxccoperators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - cache.example.com
+  resources:
+  - wxccoperators/status
+  verbs:
+  - get
