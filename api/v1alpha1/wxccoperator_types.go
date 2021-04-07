@@ -50,6 +50,7 @@ type WxccOperatorStatus struct {
 
 // WxccOperator is the Schema for the wxccoperators API
 //+kubebuilder:subresource:status
+//+kubebuilder:resource:path=wxccoperators,scope=Cluster
 type WxccOperator struct {
 	metav1.TypeMeta   `json:",inline"`
 	metav1.ObjectMeta `json:"metadata,omitempty"`
